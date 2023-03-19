@@ -5,7 +5,6 @@ import { REACT_APP_URL } from "../../config";
 const CreateTaskForm = () => {
     
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const [priority, setPriority] = useState(1);
 
   const handleSubmit = async (e) => {
@@ -13,7 +12,6 @@ const CreateTaskForm = () => {
     try {
       const res = await axios.post(`${REACT_APP_URL}/task/create`, {
         title,
-        description,
         priority,
       });
       console.log(res.data);
@@ -38,22 +36,7 @@ const CreateTaskForm = () => {
           required
         />
       </div>
-      <div className="mb-4">
-        <label
-          htmlFor="description"
-          className="block text-gray-700 font-bold mb-2"
-        >
-          Description
-        </label>
-        <textarea
-          id="description"
-          name="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          required
-        ></textarea>
-      </div>
+      
       <div className="mb-4">
         <label
           htmlFor="priority"
