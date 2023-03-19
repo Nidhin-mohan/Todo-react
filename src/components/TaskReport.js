@@ -24,7 +24,7 @@ const TasksReport = () => {
         setCounts(response.data.counts);
         console.log(counts);
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     };
 

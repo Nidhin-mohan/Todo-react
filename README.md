@@ -2,9 +2,10 @@
 
 This is a simple TODO app built with React.
 
-## Installation
+## Live link
 
-To install the app, run the following commands:
+View the React To-Do List app [here](https://todo-react-hrkl.vercel.app/)
+
 
 
 ## Usage
