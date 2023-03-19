@@ -10,11 +10,13 @@ const CreateTaskForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${REACT_APP_URL}/task/create`, {
+       await axios.post(`${REACT_APP_URL}/task/create`, {
         title,
         priority,
       });
-      console.log(res.data);
+     
+      setTitle("");
+      setPriority(1);
     } catch (err) {
       console.log(err);
     }

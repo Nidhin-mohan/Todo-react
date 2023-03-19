@@ -6,7 +6,6 @@ import { useAuth } from "../context/auth";
 function TaskList() {
   const [tasks, setTasks] = useState([]);
   const [auth]= useAuth()
-  console.log(auth.token)
 
 useEffect(() => {
   const fetchTasks = async () => {

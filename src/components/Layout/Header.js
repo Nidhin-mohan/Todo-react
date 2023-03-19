@@ -56,14 +56,9 @@ const Header = () => {
             </>
           ) : (
             <>
+             
               <NavLink
-                to="user/report"
-                className="my-1 text-black hover:text-gray-900 px-3 py-2 md:mx-2 md:my-0 md:py-1 md:text-xl md:font-medium"
-              >
-                <span>{auth?.user?.name}'s Task Report</span>
-              </NavLink>
-              <NavLink
-                to="user/task"
+                to="/user/task"
                 className="my-1 text-black hover:text-gray-900 px-3 py-2 md:mx-2 md:my-0 md:py-1 md:text-xl md:font-medium"
               >
                 <span> Task</span>

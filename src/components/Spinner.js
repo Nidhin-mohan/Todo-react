@@ -10,11 +10,13 @@ const Spinner = ({ path = "login" }) => {
       setCount((prevValue) => --prevValue);
     }, 1000);
     count === 0 &&
-      navigate(`/${path}`, {
+      navigate(`/`, {
         state: location.pathname,
+     
       });
+         console.log(location.pathname);
     return () => clearInterval(interval);
-  }, [count, navigate, location]);
+  }, [count]);
   return (
     <div className="min-h-screen bg-white flex flex-col justify-center items-center">
       <h1 className="text-center">Redirecting to you in {count} seconds</h1>
